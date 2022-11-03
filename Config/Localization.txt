@@ -1,0 +1,3 @@
+Key,english
+apparelRunningShoesSprinting,Sprinting Shoes
+apparelRunningShoesSprintingDesc,"Very lightweight, high performance running shoes.\nBeware of twisted ankles while jumping! 5 meters = Rough Landing..."

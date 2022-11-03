@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xml>
+	<ModInfo>
+		<Name value="Sprinting Shoes" />
+		<Description value="Sprinting shoes, great for speed but not stability. Beware of sprained ankles!" />
+		<Author value="TangoTracer" />
+		<Version value="A20" />
+		<Website value="" />
+	</ModInfo>
+</xml>

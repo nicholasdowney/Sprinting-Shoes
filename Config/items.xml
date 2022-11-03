@@ -1,0 +1,40 @@
+<sprintingShoes>
+
+    <append xpath="/items">
+
+        <item name="apparelRunningShoesSprinting">
+            <property name="Extends" value="armorLeatherBoots"/>
+            <property name="DescriptionKey" value="apparelRunningShoesSprintingDesc"/>
+            <property name="CustomIcon" value="apparelRunningShoesRegular"/>
+            <property name="CustomIconTint" value="86,255,109"/>
+            <property name="Tags" value="lowerbody,feet,clothing,canHaveCosmetic,noMods"/>
+            <property name="DisplayType" value="clothingRunningShoes"/>
+            <property name="Stacknumber" value="1"/>
+            <property name="Weight" value="25"/>
+            <property name="Encumbrance" value=".02"/>
+            <property name="ShowQuality" value="false"/>
+            <property name="Group" value="Clothing"/>
+            <property class="UMA">
+                <property name="Mesh" value="running_shoes"/>
+                <property name="Overlay0" value="running_shoes"/>
+                <property name="Overlay0Tint" value="86,255,109"/>
+            </property>
+            <property name="EconomicValue" value="200"/>
+            <effect_group tiered="false">
+                <passive_effect name="HypothermalResist" operation="base_add" value="1.8,4.2"/>
+                <passive_effect name="HyperthermalResist" operation="base_add" value="1.5,2.5"/>
+                <passive_effect name="StaminaChangeOT" operation="perc_add" value=".2" tags="running"/><display_value name="dStaminaRegen" value=".2"/>
+                <passive_effect name="ModSlots" operation="base_set" value="0"/>
+                <passive_effect name="RunSpeed" operation="perc_add" value=".20"/><display_value name="dRunSpeed" value=".20"/>
+            </effect_group>
+
+            <effect_group> <!-- Apply sprain whenever taking fall damage -->
+                <triggered_effect trigger="onSelfFallImpact" action="AddBuff" buff="buffLegSprained">
+                    <requirement name="CVarCompare" cvar="_fallSpeed" operation="GTE" value="0.15"/> <!-- At 5 blocks fall height, player will 'twist their ankle' -->
+                </triggered_effect>
+            </effect_group>
+        </item>
+
+    </append>
+
+</sprintingShoes>
